@@ -11,6 +11,7 @@ This project belongs to the 2023 Programming Lab at National Dong Hwa University
 1. Clone this repository to your local machine:
 ```bash
 git clone https://github.com/appleiphonedddd/NDHU_Lab_of_programming_2023.git
+```
 
 2. Change directory to the project folder
 ```bash
