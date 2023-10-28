@@ -10,7 +10,7 @@ This project belongs to the 2023 Programming Lab at National Dong Hwa University
 ## Build Setup (Local)
 1. Clone this repository to your local machine:
 ```bash
-git clone https://github.com/appleiphonedddd/NDHU_Lab_of_programming_2023.git
+git clone https://github.com/appleiphonedddd/NDHU_Lab_of_Programming_2023.git
 ```
 
 2. Change directory to the project folder
