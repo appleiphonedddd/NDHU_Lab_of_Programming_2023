@@ -15,7 +15,7 @@ git clone https://github.com/appleiphonedddd/NDHU_Lab_of_programming_2023.git
 
 2. Change directory to the project folder
 ```bash
-cd NDHU_Lab_of_programming_2023
+cd NDHU_Lab_of_Programming_2023
 ```
 
 3. Elevate shell script privileges and Compile c source code
