@@ -1,4 +1,4 @@
-# NDHU_Lab_of_programming_2023
+# NDHU_Lab_of_Programming_2023
 
 ## Description
 This project belongs to the 2023 Programming Lab at National Dong Hwa University. It encompasses various implementations and examples of programming, aiming to assist students in better understanding and practicing programming.
