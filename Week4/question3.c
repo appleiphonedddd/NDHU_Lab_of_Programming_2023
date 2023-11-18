@@ -1,26 +1,30 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
-    int size, counter = 0;
-    int* arr;
-    scanf("%d", &size);
-    arr = (int*)malloc(size * sizeof(int));
-    
-    if (arr == NULL) {
-        printf("Memory not allocated.\n");
-        exit(0);
+    int n, i;
+    scanf("%d", &n);
+
+    int scores[n];
+    int sum = 0;
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &scores[i]);
+        sum += scores[i];
     }
 
-    for(int i = 0; i < size; i++) {
-        scanf("%d", &arr[i]);
-        if(arr[i] < 60) {
-            counter++;
+    float avg = (float)sum / n;
+
+    int failCount = 0;
+    for (i = 0; i < n; i++)
+    {
+        if (scores[i] < avg)
+        {
+            failCount++;
         }
     }
 
-    printf("%d", counter);
-    free(arr);
+    printf("%d\n", failCount);
+
     return 0;
 }

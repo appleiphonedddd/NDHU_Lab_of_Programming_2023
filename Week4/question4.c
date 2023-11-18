@@ -1,49 +1,28 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-int isMultipleOf11(char* num) {
-    int length = strlen(num);
-    int evenSum = 0, oddSum = 0;
-
-    for (int i = 0; i < length; i++) {
-        if (i % 2 == 0) {
-            evenSum += num[i] - '0';
-        } else {
-            oddSum += num[i] - '0';
-        }
-    }
-
-    int difference = abs(evenSum - oddSum);
-    
-    return (difference == 0 || difference % 11 == 0);
-}
-
-int main() {
+int main()
+{
     char num[1001];
 
-    FILE *fp = fopen("input.txt", "r");
-    if (!fp) {
-        perror("Error opening the file");
-        return -1;
-    }
-
-    while (fgets(num, sizeof(num), fp)) {
-        // Remove newline character
-        num[strcspn(num, "\n")] = 0;
-
-        // Stop at 0
-        if (strcmp(num, "0") == 0) {
+    while (scanf("%s", num) == 1)
+    {
+        if (num[0] == '0' && num[1] == '\0')
             break;
+
+        int sum = 0;
+        for (int i = 0; num[i]; i++)
+        {
+            if (i % 2 == 0)
+                sum += num[i] - '0';
+            else
+                sum -= num[i] - '0';
         }
 
-        if (isMultipleOf11(num)) {
+        if (sum % 11 == 0)
             printf("%s is a multiple of 11.\n", num);
-        } else {
+        else
             printf("%s is not a multiple of 11.\n", num);
-        }
     }
 
-    fclose(fp);
     return 0;
 }
